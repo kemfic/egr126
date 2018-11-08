@@ -57,7 +57,7 @@ int main(){
   cout << "x = [ " << endl;
   for(int i=0; i<M; i++){
     for(int j=0; j<N; j++){
-      cout << z[i][j] << " ";
+      cout << x[i][j] << " ";
     }
     cout << endl;
   }
@@ -67,7 +67,7 @@ int main(){
   cout << "y = [ " << endl;
   for(int i=0; i<M; i++){
     for(int j=0; j<N; j++){
-      cout << z[i][j] << " ";
+      cout << y[i][j] << " ";
     }
     cout << endl;
   }
