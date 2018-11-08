@@ -92,24 +92,28 @@ float getMeanElim(int array[], int size){
 
 int main(){
 	int size = 0;
-  
+  //get size for array 
   cout << "Please input an array size: " << endl;
   cin >> size;
 
+  //create array of size size
   int LIST[size];
-  
+
+  // input values for array
   for (int i =0; i<size; i++){
     cout << "Please input an integer for element " << i << " of array." << endl << endl;
     cin >> LIST[i];
   }
   
+  // output array size and elements
   cout << "You input an array of size: " << size << endl;
-  cout << "Array elements: " << endl;
+  cout << "Array elements: " << endl << "[ "; 
   for (int i=0; i<(size-1); i++){
-    cout << "[ " << LIST[i] << ", ";
+    cout << LIST[i] << ", ";
   }
   cout << LIST[size-1] << " ]" << endl;
   
+
 	int min = getMin(LIST, size);
 	int max = getMax(LIST, size);
 	int sum = getSum(LIST, size);
