@@ -11,3 +11,53 @@
 
 
 */
+
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+
+int main(){
+  int M, N;
+  
+  cout << "Enter the rows of your arrays" << endl;
+  cin >> M;
+  cout << "Enter the columns of your arrays" << endl;
+  cin >> N;
+
+  int x[M][N], y[M][N], z[M][N];
+
+  cout << "Enter the elements for the first array, x." << endl;
+  
+  for(int i=0; i<M; i++){
+    for(int j=0; j<N; j++){
+      cout << "[ " << i << ", " << j << " ]" << endl;
+      cin >> x[i][j];
+    }
+  }
+
+  cout << "Enter the elements for the second array, y." << endl;
+  for(int i=0; i<M; i++){
+    for(int j=0; j<N; j++){
+      cout << "[ " << i << ", " << j << " ]" << endl;
+      cin >> x[i][j];
+    }
+  }
+  
+  for(int i=0; i<M; i++){
+    for(int j=0; j<N; j++){
+      z[i][j] = x[i][j] + y[i][j];
+    }
+  }
+
+  cout << "x + y = [ " << endl;
+  for(int i=0; i<M; i++){
+    for(int j=0; j<N; j++){
+      cout << z[i][j] << " ";
+    }
+    cout << endl;
+  }
+  cout << " ]" << endl;
+
+  return 0;
+  }
+
