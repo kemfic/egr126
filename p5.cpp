@@ -24,3 +24,83 @@
 
 */
 
+
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+
+int getMax(int array[], int size){
+	/*
+		returns max of array
+	*/
+
+	int max = array[0];
+
+	for (int i = 1; i<size; i++) {
+		if (array[i] > max) {
+			max = array[i];
+		}
+	}
+
+	return max;
+}
+
+int getMin(int array[], int size){
+	/*
+		returns min of array
+	*/
+	int min = array[0];
+
+	for (int i = 1; i<size; i++) {
+		if (array[i] < min) {
+			min = array[i];
+		}
+	}
+
+	return min;
+}
+
+int getSum(int array[], int size){
+	/*
+		returns sum of elements in array
+	*/
+
+	int sum = 0;
+
+	for (int i=0; i < size; i++){
+		sum += array[i];
+	}
+	
+	return sum;
+}
+
+float getMeanElim(int array[], int size){
+	/*
+		removes min and max values from array, and returns mean.
+	*/
+	int min = getMin(array, size);
+	int max = getMax(array, size);
+	int sum = getSum(array, size);
+
+	float mean = 0.0;
+
+	mean = (sum-(min + max));
+	mean /= (size-2);
+
+	return mean;
+}
+
+int main(){
+	int array[] = {0, 1, 2, 3, 4, 5, 6};
+	int size = sizeof(array)/sizeof(int);
+
+	int min = getMin(array, size);
+	int max = getMax(array, size);
+	int sum = getSum(array, size);
+	float meanElim = getMeanElim(array, size);
+	cout << "Min: " << min << endl
+			<< "Max: " << max << endl
+			<< "Sum: " << sum << endl
+			<< "Mean ( excluding min and max values ): " << meanElim << endl;
+  return 0;
+}
