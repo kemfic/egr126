@@ -39,7 +39,7 @@ int main(){
   for(int i=0; i<M; i++){
     for(int j=0; j<N; j++){
       cout << "[ " << i << ", " << j << " ]" << endl;
-      cin >> x[i][j];
+      cin >> y[i][j];
     }
   }
   
