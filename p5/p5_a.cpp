@@ -105,10 +105,10 @@ int main(){
   
   cout << "You input an array of size: " << size << endl;
   cout << "Array elements: " << endl;
-  for (int i=0; i<size; i++){
-    cout << LIST[i];
+  for (int i=0; i<(size-1); i++){
+    cout << "[ " << LIST[i] << ", ";
   }
-  cout << endl;
+  cout << LIST[size-1] << " ]" << endl;
   
 	int min = getMin(LIST, size);
 	int max = getMax(LIST, size);
