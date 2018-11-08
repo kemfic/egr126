@@ -54,7 +54,7 @@ int main(){
 
 
   //output x
-  cout << "x + y = [ " << endl;
+  cout << "x = [ " << endl;
   for(int i=0; i<M; i++){
     for(int j=0; j<N; j++){
       cout << z[i][j] << " ";
