@@ -35,6 +35,7 @@ int main(){
     }
   }
 
+
   cout << "Enter the elements for the second array, y." << endl;
   for(int i=0; i<M; i++){
     for(int j=0; j<N; j++){
@@ -43,12 +44,36 @@ int main(){
     }
   }
   
+
+  //sum x and y
   for(int i=0; i<M; i++){
     for(int j=0; j<N; j++){
       z[i][j] = x[i][j] + y[i][j];
     }
   }
 
+
+  //output x
+  cout << "x + y = [ " << endl;
+  for(int i=0; i<M; i++){
+    for(int j=0; j<N; j++){
+      cout << z[i][j] << " ";
+    }
+    cout << endl;
+  }
+  cout << " ]" << endl;
+
+  // output y
+  cout << "y = [ " << endl;
+  for(int i=0; i<M; i++){
+    for(int j=0; j<N; j++){
+      cout << z[i][j] << " ";
+    }
+    cout << endl;
+  }
+  cout << " ]" << endl;
+  
+  //output sum
   cout << "x + y = [ " << endl;
   for(int i=0; i<M; i++){
     for(int j=0; j<N; j++){
