@@ -14,39 +14,49 @@
 #include <iostream>
 #include <stdlib.h>
 using namespace std;
+int idx = -1;
 
-
-bool binSearch(int list[], int size, int key){
-  int min = 0, max = size, mid = (size/2);
+bool binSearch(int list[], int n, int key){
+  int min = 0;
+  int max = n-1;
+  int mid = n/2;
   int counter = 0;
   while(max >= min){
     counter++;
-    mid = (min + (max-min))/2;
+    mid = min + ((max-min)/2);
 
     if(list[mid] == key){
-      key = mid;
+      idx = mid;
+      cout << "Comparisons made: " << counter << endl;
       return true;
     }else if(list[mid] > key){
-      cout << "smol" << endl;
       max = mid - 1;
     }else if(list[mid] < key){
-      cout << "bigg" << endl;
       min = mid + 1;
     }
-    cout << counter << endl;
   }
   return false;
 }
 
 int main(){
-  int list[] = {1, 2,3,4,5,6,7,8,9,10,11};
-  int size = sizeof(list)/sizeof(int);
-  int key = 10;
-  cout << "key " << key <<endl;
+  int n;
+  int key;
+  cout << "input list size" << endl;
+  cin >> n;
+
+  int list[n];
+  cout << "Enter elements into list in ascending order. " << endl;
+  for(int i =0; i<n;i++){
+    cin >> list[i];
+  }
+  
+  cout << "Enter key to search in list" << endl;
+  cin >> key;
+
   bool search;
-  search = binSearch(list, size, key);
+  search = binSearch(list, n, key);
   if(search == true){
-    cout << list[key] << "found at index: " << key << endl;
+    cout << "key found at index: " << idx << endl;
   }else{
     cout << "key not found" << endl;
   }
