@@ -1,5 +1,5 @@
 /*
- * 2018, Kemal Ficic
+ * 2018, Kemal Ficici
  *  Project 6, EGR-126
  *
  *    Program B.
